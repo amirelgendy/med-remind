@@ -30,7 +30,7 @@ final exportServiceProvider = Provider<ExportService>((ref) => ExportService());
 
 final refreshProvider = StateProvider<int>((ref) => 0);
 
-void refreshApp(Ref ref) {
+void refreshApp(WidgetRef ref) {
   ref.read(refreshProvider.notifier).state++;
 }
 
