@@ -165,8 +165,10 @@ class NotificationService {
       '${item.medication.name} - ${item.medication.doseAmount} ${item.medication.doseUnit}',
       tz.TZDateTime.from(triggerAt, tz.local),
       NotificationDetails(android: androidDetails),
-      payload: 'event:${event.id}',
+            payload: 'event:${event.id}',
       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+      uiLocalNotificationDateInterpretation:
+          UILocalNotificationDateInterpretation.absoluteTime,
     );
   }
 
